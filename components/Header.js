@@ -2,44 +2,41 @@ import Link from 'next/link';
 
 export default function Header({ name }) {
   return (
-    <header className="pt-20 pb-12">
-      <div className="w-12 h-12 rounded-full block mx-auto mb-4 bg-gradient-conic from-gradient-3 to-gradient-4" />
-      <p className="text-2xl dark:text-white text-center">
-        <Link href="/">
-          <a>{name}</a>
-        </Link>
-      </p>
-
-      {/* Navigation Links */}
-      <nav className="text-center mt-4">
-        <ul className="flex justify-center space-x-6">
-          <li>
+    <header className="bg-blue-500 text-white py-4">
+      <div className="container mx-auto flex items-center justify-between">
+        <div className="flex items-center">
+          <Link href="/">
+            <a className="text-2xl font-bold">{name}</a>
+          </Link>
+          <nav className="ml-6 space-x-4">
+            {/* Navigation Links */}
             <Link href="/">
-              <a className="text-blue-500 hover:text-blue-700">Home</a>
+              <a>Home</a>
             </Link>
-          </li>
-          <li>
             <Link href="/categories">
-              <a className="text-blue-500 hover:text-blue-700">Categories</a>
+              <a>Categories</a>
             </Link>
-          </li>
-          <li>
             <Link href="/about">
-              <a className="text-blue-500 hover:text-blue-700">About</a>
+              <a>About</a>
             </Link>
-          </li>
-          <li>
             <Link href="/contact">
-              <a className="text-blue-500 hover:text-blue-700">Contact</a>
+              <a>Contact</a>
             </Link>
-          </li>
-        </ul>
-      </nav>
-
-      {/* Optional Search Bar */}
-      <div className="mt-4 text-center">
-        {/* Add your search bar component here if needed */}
+          </nav>
+        </div>
+        <div className="flex items-center">
+          {/* Optional Search Bar */}
+          <input
+            type="text"
+            placeholder="Search..."
+            className="px-2 py-1 rounded-md border"
+          />
+          <button className="bg-blue-700 text-white px-3 py-1 ml-2 rounded-md">
+            Search
+          </button>
+        </div>
       </div>
     </header>
   );
 }
+
