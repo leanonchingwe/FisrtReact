@@ -1,5 +1,5 @@
 .colorBackground {
-  left: 50%;
+  left: 10%;
   transform: translateX(-50%);
   background: radial-gradient(
       at 71% 77%,
@@ -16,14 +16,14 @@
   max-height: 800px;
   height: 80vh;
   max-width: 1400px;
-  width: 70vw;
+  width: 20vw;
   width: 100%;
   filter: blur(44px);
   z-index: -1;
 }
 
 .colorBackgroundBottom {
-  left: 50%;
+  left: 20%;
   transform: translateX(-50%) rotate(190deg);
   background: radial-gradient(
       at 83% 25%,
