@@ -52,8 +52,13 @@ export default function Layout({ children }) {
   return (
     <div className="relative pb-24 overflow-hidden">
       <div className="flex flex-col items-center max-w-2xl w-full mx-auto">
-        {children}
+        <div className="flex flex-row justify-between align-items-center mb-4">
+          <img src={blogPost.featuredImage} alt={blogPost.title} />
+          <h2>{blogPost.title}</h2>
+        </div>
+        <p>{blogPost.excerpt}</p>
+        <Link to={`/blog/${blogPost.id}`}>Read more</Link>
       </div>
     </div>
   );
-}
+};
