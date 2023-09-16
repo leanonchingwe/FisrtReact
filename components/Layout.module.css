@@ -17,7 +17,7 @@
   height: 80vh;
   max-width: 1400px;
   width: 20vw;
-  width: 100%;
+  width: 10%;
   filter: blur(44px);
   z-index: -1;
 }
@@ -40,7 +40,7 @@
   height: 600px;
   max-width: 900px;
   width: 55vw;
-  width: 100%;
+  width: 10%;
   filter: blur(44px);
   z-index: -1;
 }
